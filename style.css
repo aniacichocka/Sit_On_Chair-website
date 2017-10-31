@@ -304,6 +304,7 @@ main section:first-of-type {
   padding: 10px;
   vertical-align: middle;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .lt-sign span {
@@ -815,19 +816,60 @@ form input:nth-last-of-type(2) {
   margin-bottom: 10px;
 }
 
-.agreement {
-  position: relative;
-}
-
 .agreement p {
   font-size: 20px;
-  margin-left: 116px;
+  margin: 0 0 0 51px;
 }
 
-[type="checkbox"] {
+.check-area {
+  position: relative;
+  padding: 11px 16px 20px 0px;
+}
+
+.check-area input {
+  display: block;
+  opacity: 0;
+  height: 46px;
+  width: 46px;
   position: absolute;
-  bottom: 14px;
-  left: 71px;
+  cursor: pointer;
+}
+
+.check-area input:checked + label::after {
+  display: block;
+}
+
+.check-area label {
+  display: block;
+  position: relative;
+  font-size: 28px;
+  color: rgb(179, 179, 179);
+  padding-left: 65px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.check-area label::before, .check-area label::after {
+  border: 1px solid rgb(36, 186, 159);
+  content: "";
+  display: block;
+  left: 56px;
+  top: 8px;
+  width: 46px;
+  height: 46px;
+  position: absolute;
+}
+
+.check-area label::after {
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
+  border: 0;
+  display: none;
+}
+
+.check-area label .active {
+  background: url("../images/form_ok.jpg");
+  width: 48px;
+  height: 40px;
 }
 
 [type="submit"] {
@@ -840,6 +882,13 @@ form input:nth-last-of-type(2) {
   border: 1px solid rgb(36, 186, 159);
   padding: 14px 109px;
   color: white;
+  outline: 0;
+  cursor: pointer;
+}
+
+.btn-hover:hover {
+  background-color: rgb(127, 255, 212);
+  border: 1px solid rgb(127, 255, 212);
 }
 
 
