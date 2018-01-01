@@ -1,11 +1,11 @@
-/*#project-img {
+/* #project-img {
   z-index: -1;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%,0);
   opacity: .5;
-}*/
+} */
 
 
 
@@ -105,7 +105,7 @@ body {
 .container {
   width: 1078px;
   margin: 0 auto;
-  /*background-color: rgba(125, 25, 25, 0.2);*/
+  /* background-color: rgba(125, 25, 25, 0.2); */
 }
 
 .row::after,
@@ -263,16 +263,17 @@ header .column {
 
 
 
-.sign {
-  width: 9%;
+.slider {
+	position: relative;
 }
 
-.black-chair {
-  width: 36%;
+.chair-black,
+.chair-round {
+  width: 42%;
 }
 
 .chair-info {
-  width: 46%;
+  width: 58%;
 }
 
 main section:first-of-type {
@@ -285,43 +286,54 @@ main section:first-of-type {
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 61%, rgba(208,209,216,1) 100%);
 }
 
-.slider .column {
+.column {
   float:left;
   height: 504px;
 }
 
 .lt-sign,
 .gt-sign {
-  width: 100%;
-  position: relative;
-}
-
-.sign span {
-  color: rgb(36, 186, 159);
+	color: rgb(36, 186, 159);
   font-size: 75px;
-  padding: 10px;
-  vertical-align: middle;
   font-weight: 300;
   cursor: pointer;
+	position: absolute;
+  z-index: 1;
 }
 
-.lt-sign span {
-  position: absolute;
-  top: 200px;
-  left: 2px;
+.lt-sign {
+  top: 210px;
+  left: 12px;
 }
 
-.gt-sign span {
-  position: absolute;
-  top: 200px;
-  right: 10px;
+.gt-sign {
+  top: 210px;
+  right: 22px;
 }
 
-.black-chair {
+.slider ul {
+	list-style-type: none;
+	height: 504px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.chair-black {
   background-image: url("images/black_chair.png");
   background-repeat: no-repeat;
-  background-size: 151%;
-  background-position: top 70px left -126px;
+  background-size: 132%;
+  background-position: top 66px left -35px;
+	/* opacity: 0.5; */
+}
+
+.chair-round {
+  background-image: url("images/red_chair.png");
+  background-repeat: no-repeat;
+  background-size: 87%;
+  background-position: top 100px left 74px;
+	/* opacity: 0.5; */
 }
 
 .chair-info h1 {
@@ -330,7 +342,7 @@ main section:first-of-type {
   text-align: center;
   margin-top: 134px;
   margin-bottom: 30px;
-  padding-right: 53px;
+  padding-right: 119px;
   font-weight: 400;
 }
 
@@ -344,8 +356,12 @@ main section:first-of-type {
   text-align: center;
   line-height: 21px;
   width: 420px;
-  margin: 0 0 45px 12px;
+  margin: 0 0 45px 45px;
   word-spacing: 1px;
+}
+
+.slider li:nth-of-type(even) p {
+  color: rgb(36, 186, 159);
 }
 
 .chair-info a {
@@ -359,7 +375,15 @@ main section:first-of-type {
   background-color: rgb(36, 186, 159);
   color: white;
   border-radius: 10px;
-  margin-left: 93px;
+  margin-right: 109px;
+}
+
+.main-slide {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 
@@ -761,18 +785,17 @@ main section:nth-of-type(3){
 
 .column.main-form {
   width: 60%;
+  padding: 3px 1px 0 12px;
+  height: 420px;
 }
 
-.column.red-chair {
+.column.chair-red {
   width: 40%;
+  height: 420px;
 }
 
 .to-contact .column {
   float: left;
-}
-
-.to-contact {
-  height: 420px;
 }
 
 .contact .title span {
@@ -782,10 +805,6 @@ main section:nth-of-type(3){
   left: 14px;
   letter-spacing: 1px;
   position: absolute;
-}
-
-.column.main-form {
-  padding: 3px 1px 10px 12px;
 }
 
 form input,
@@ -809,7 +828,7 @@ form input:nth-last-of-type(2) {
   margin-bottom:12px;
   }
 
-.red-chair img {
+.chair-red img {
   margin: -11px 10px 10px 75px;
   margin-bottom: 10px;
 }
@@ -896,6 +915,10 @@ form input:nth-last-of-type(2) {
 *******************************/
 
 
+
+footer .column {
+  height: 150px;;
+}
 
 .column.rights {
   width: 60%;
