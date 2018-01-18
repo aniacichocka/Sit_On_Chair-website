@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded',function () {
     var next = body.querySelector('.gt-sign');
 
     var listImg = body.querySelectorAll('.main-slide');
-    console.log(listImg);
 
     var index = 0;
 
@@ -64,5 +63,20 @@ document.addEventListener('DOMContentLoaded',function () {
     })
   }
   slider();
+
+  function dropDown() {
+    var body = document.querySelector('body');
+    var triangles = body.querySelectorAll('.triangle');
+
+    triangles.forEach(function(element) {
+      element.addEventListener('click', function(){
+
+        var dropDownList = this.previousElementSibling;
+
+        dropDownList.classList.toggle('hidden');
+      })
+    })
+  }
+  dropDown();
 
 })

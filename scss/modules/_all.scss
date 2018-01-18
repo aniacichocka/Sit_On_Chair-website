@@ -1,0 +1,17 @@
+
+@mixin dropDown {
+  border: 1px solid rgb(36, 186, 159);
+  background-color: white;
+  padding: 10px 10px 10px 15px;
+  width: 359px;
+  position: absolute;
+  top: 57px;
+  left: -1px;
+  z-index: 1;
+  li {
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    color: black;
+    line-height: 28px;
+  }
+}
